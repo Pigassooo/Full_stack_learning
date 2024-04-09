@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul li{
+            list-style-image: url(cat.JPG);
+            margin-left: 200px;
+            font-size: 50px; 		/*字体大小*/
+	        line-height: 30px;      /*行高*/
+	        font-family: "Times New Roman","微软雅黑","宋体"; 	/*字体类型：如果没有幼圆就显示黑体，没有黑体就显示默认*/
+	        font-style: italic ;		/*italic表示斜体，normal表示不倾斜*/
+	        font-weight: bold;	/*粗体*/
+	        font-variant: small-caps;  /*小写变大写*/
+            cursor: pointer;  /*鼠标放在那个标签上时，光标显示手状*/
+        }
+
+        div{
+			width: 100px;
+			height: 100px;
+			background-color: #00cc66;
+			margin-right: 100px;
+			float: left;
+		}
+
+		#div1{
+			overflow: auto;/*超出的部分让浏览器自行解决*/
+		}
+		#div2{
+			overflow: visible;/*超出的部分会显示出来*/
+		}
+
+		#div3{
+			overflow: hidden;/*超出的部分将剪切掉*/
+		}
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li>我是jinggg</li>
+        <li>我是亚洲第一炸弹妹</li>
+        <li>噢耶</li>
+    </ul>
+
+    <div id="div1">其实很简单 其实很自然 两个人的爱由两人分担 其实并不难 是你太悲观 隔着一道墙不跟谁分享 不想让你为难 你不再需要给我个答案</div>
+    <div id="div2">其实很简单 其实很自然 两个人的爱由两人分担 其实并不难 是你太悲观 隔着一道墙不跟谁分享 不想让你为难 你不再需要给我个答案</div>
+    <div id="div3">其实很简单 其实很自然 两个人的爱由两人分担 其实并不难 是你太悲观 隔着一道墙不跟谁分享 不想让你为难 你不再需要给我个答案</div>
+
+
+    <table>
+        <tr>
+            <td>原始图片</td>
+            <td>图片加入黑白效果</td>
+        </tr>
+        <tr>
+            <td><img src="cat.JPG"></td>
+            <td><img src="cat.JPG" style="filter: grayscale();"></td>  /*滤镜：设置图片为灰白效果*/
+        </tr>
+    </table>
+
+</body>
+</html>
