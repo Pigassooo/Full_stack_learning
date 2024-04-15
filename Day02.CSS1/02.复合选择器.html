@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器 */
+        ol li {
+            color: pink;
+        }
+
+        ol li a {
+            color: red;
+        }
+
+        /* 子选择器 */
+        .nav>a {
+            color: red;
+        }
+
+        /* 并集选择器 ,隔开 */
+        /*
+        div,
+        p,
+        .pig li{
+
+        } */
+
+        /* 伪类选择器 */
+        /* 1.链接伪类选择器 */
+        /*
+        a:link
+        a:visited
+        a:hover
+        a:active */
+
+        
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>ol child</li>
+        <li>ol child</li>
+        <li><a href='#'>ol child</a></li>
+    </ol>
+    <ul>
+        <li>ul child</li>
+        <li>ul child</li>
+        <li>ul child</li>
+    </ul>
+
+    <div class="nav">
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+</body>
+
+</html>

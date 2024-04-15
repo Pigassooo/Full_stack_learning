@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体验css语法规范</title>
+    <link rel="stylesheet" href="style1.CSS">
+    <style>
+        /* 选择器 {样式} */
+        p {
+            color: red;
+            font-size: 32px;
+        }
+
+        .red {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+
+        .red1 {
+            color: red;
+        }
+
+        .green {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 类选择器：样式.定义，结构class调用，可以多次 */
+        .font {
+            font-size: 40px;
+        }
+
+        /* id选择器：样式#定义，结构id调，只能调用一次，一般与js搭配 */
+        #pink {
+            color: pink;
+        }
+
+        /* 通配符选择器：用*定义，选取页面中所有元素 */
+        * {
+            size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>interesting</p>
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="red"></div>
+    <div class="red1 font">lihua</div>
+    <div id="pink">mike</div>
+    <div class="blue">blue</div>
+</body>
+
+</html>
