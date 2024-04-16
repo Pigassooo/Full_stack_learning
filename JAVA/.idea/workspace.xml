@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="951ff77f-b349-4911-af56-e2efa4e1ed43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/01.排版标签.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/02.字体标签和超链接.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/03.图片标签.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/04.列表标签和表格标签.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/05.框架标签.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/06.内嵌框架标签.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/07.表单标签.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/08.多媒体标签.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/09.H5表单类型.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/10.H5表单元素（标签）1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/11.H5表单元素（标签）2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/12.H5多媒体.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/13.H5DOM操作.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/14.综合案例 注册页面.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/20576968-hd_1920_1080_25fps.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/bensound-jealous.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01.HTML/cat.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day02.CSS1/01.基础选择器.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day02.CSS1/02.复合选择器.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day02.CSS1/03.显示模式转换.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day02.CSS1/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day02.CSS1/cat.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day02.CSS1/style1.CSS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2f7oDSz1cWEdeAoRieDjuSS5DgB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="951ff77f-b349-4911-af56-e2efa4e1ed43" name="Changes" comment="" />
+      <created>1713161358511</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713161358511</updated>
+      <workItem from="1713161359639" duration="28000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

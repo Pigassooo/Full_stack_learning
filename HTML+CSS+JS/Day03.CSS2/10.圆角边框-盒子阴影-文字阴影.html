@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框-盒子阴影-文字阴影</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* border-radius: 10px; */
+            border-radius: 50px;
+            margin: 100px auto;
+            /* box-shadow:h-shadow v-shadow blur spread color inset */
+
+            /* text-shadow: h-shadow v-shadow blur color */
+            text-shadow: 5px 5px 6px rgba(0,0,0,0.3);
+            font-size: 50px;
+            font-weight: 700;
+            color: orange;
+            line-height: 200px;
+        }
+        div:hover{
+            box-shadow: 10px 10px 10px -4px black;
+        }
+    </style>
+</head>
+<body>
+    <div>我是Piga</div>
+</body>
+</html>
