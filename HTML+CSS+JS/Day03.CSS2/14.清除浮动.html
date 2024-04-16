@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动的方法</title>
+    <style>
+        /* 3 */
+        /* .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        } */
+
+        /* 4 */
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+        .clearfix:after{
+            clear: both;
+        }
+        .clearfix {
+            *zoom: 1;
+        }
+
+
+        .box {
+            /* overflow: hidden; */
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
+
+        /* 1. 额外标签法 */
+        /* .clear {
+            clear:both;
+        } */
+
+        /* 2. 父级添加overflow */
+
+        /* 3. after伪元素 */
+
+        /* 4，双伪元素清除浮动 */
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="damao">123</div>
+        <div class="ermao">345</div>
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>
