@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">content</div>
+    <img src="1.JPG">
+    <script>
+        const box = document.querySelector('.box')
+
+        // innerText 只识别文本，不解析标签
+        // box.innerText = `<strong> content <strong/>`
+
+        box.innerHTML = `<strong> content <strong/>`
+
+        const img = document.querySelector('img')
+        img.src = 'cat.JPG'
+        img.title = "cat"
+
+        console.log(document.body);
+    </script>
+</body>
+</html>

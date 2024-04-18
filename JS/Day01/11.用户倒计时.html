@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textare name="" id="" cols="30" rows="10">
+        1111111111111111111111111111111111
+    </textare>
+    <br>
+    <button class="btn" disabled>111(10)</button>
+    <script>
+        let i = 3
+        const btn = document.querySelector('.btn')
+        // console.log(btn.innerHTML);
+        let n = setInterval(function(){
+            i--
+            btn.innerHTML = `阅读上述(${i})`
+            if(i === 0){
+                clearInterval(n)
+                btn.disabled = false
+                btn.innerHTML = '同意'
+            }
+        },1000)
+
+    </script>
+</body>
+</html>

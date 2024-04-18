@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="电脑">
+    <input type="checkbox">
+    <button disabled>点击</button>
+    <script>
+        const username = document.querySelector('input')
+        console.log(username.value);
+
+        const ipt = document.querySelector('input')
+        ipt.checked = true;
+
+        const bt = document.querySelector('button')
+        bt.disabled = false
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            height: 80px;
+            margin: 0 auto;
+        }
+        th {
+            padding: 5px 20px;
+        }
+
+        table,
+        th,
+        td {
+            border:1px solid #000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>订单确认</h2>
+
+
+    <script>
+        let price = +prompt('price')
+        let num = +prompt('num')
+        let address = prompt('address')
+
+        let sum = price * num
+
+        document.write(`
+            <table>
+                <tr>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>num</th>
+                    <th>totalvalue</th>
+                    <th>afress</th>
+                </tr>
+                <tr>
+                    <td>111</td>
+                    <td>${price}</td>
+                    <td>${num}</td>
+                    <td>${sum}</td>
+                    <td>${address}</td>
+                </tr>
+            </table>
+        `)
+
+    </script>
+</body>
+</html>
