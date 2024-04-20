@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 强制一行内显示 */
+            white-space: nowrap;
+            /* 超出的不显示 */
+            overflow: hidden;
+            /* 超出的部分变为... */
+            text-overflow: ellipsis;
+        }
+        .two {
+            width: 150px;
+            height: 65px;
+            background-color: pink;
+            margin: 300px auto;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">你好你好你好你好你好</div>
+    <div class="two">你好你好你好你好你好你好你好你好你好你好你好你好你好你好</div>
+</body>
+</html>

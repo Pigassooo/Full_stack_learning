@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+        .da {
+            background-color: red;
+             z-index: 2;
+             left: 50px;
+             top: 50px;
+        }
+        .er{
+            background-color: green;
+            z-index: 1;
+        }
+        .ge {
+            background-color: blue;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body> 
+    <div class="box da"></div>
+    <div class="box er"></div>
+    <div class="box ge"></div>
+</body>
+</html>
