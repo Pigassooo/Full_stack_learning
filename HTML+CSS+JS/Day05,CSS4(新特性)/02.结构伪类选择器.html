@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. 选择ul里面的第一个li */
+        /* ul li:first-child{
+            background-color: pink;
+        } */
+
+        /* 2. 选择ul里面的最后一个li */
+        /* ul li:last-child{
+            background-color: pink;
+        } */
+
+        /* 3. 选择第n个 */
+        /* ul li:nth-child(3){
+            background-color: pink;
+        } */
+
+        /* 4. 选择所有奇数odd或偶数even */
+        /* ul li:nth-child(even){
+            background-color: pink;
+        } */
+
+        section div:nth-of-type(1){
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+
+    <!-- nth-child 与 nth-of-type -->
+    <!-- nth-child 给每个孩子都排了序号 -->
+    <!-- nth-of-type 会把指定元素的盒子元素排上序号 -->
+    <section>
+        <p>111</p>
+        <div>222</div>
+        <div>333</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios基本使用</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.5.0/axios.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class=""></h2>
+        <button>GET</button>
+        <button>POST</button>
+        <button>PUT</button>
+        <button>DELETE</button>
+    </div>
+
+    <script>
+        //获取按钮
+        const btns = document.querySelectorAll('button')
+
+        // 创建实例对象
+        const duanzi = axios.create({
+            baseURL: 'https://api.apiopen.top',
+            timeout: 2000
+        })
+        const another = axios.create({
+                baseURL: 'https://b.com',
+                timeout: 2000
+            })
+        // 这里 duanzi 与 axios 对象的功能是一样的
+
+        // duanzi({
+        //     url: '/getJoke'
+        // }).then(Response=>{
+        //     console.log(Response);
+        // })
+
+        duanzi.get('/getJoke').then(Response=>{
+            console.log(Response.data);
+        })
+
+    </script>
+</body>
+
+</html>

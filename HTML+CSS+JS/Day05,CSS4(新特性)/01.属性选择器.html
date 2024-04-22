@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input[value]{
+            color: pink;
+        } */
+
+        /* input[type=text]{
+            color: pink;
+        } */
+
+        /* div[class^=icon]{
+            color: red;
+        } */
+
+        section[class$=-data]{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.利用属性选择器可以不借助其他选择器 -->
+    <!-- <input type="text" value="111">
+    <input type="text"> -->
+
+    <!-- 2.利用属性=值来选定 -->
+    <!-- <input type="text">
+    <input type="password"> -->
+
+    <!-- 3.利用属性选择器选择属性开头的值 -->
+    <!-- <div class="icon1">111</div>
+    <div class="icon2">222</div>
+    <div class="icon3">333</div>
+    <div class="icon4">444</div>
+    <div class="111">555</div> -->
+
+    <!-- 4. 属性选择器选择属性结尾值 -->
+    <section class="icon1-data">111</section>
+    <section class="icon2-data">222</section>
+    <section class="icon3-da">333</section>
+
+</body>
+</html>

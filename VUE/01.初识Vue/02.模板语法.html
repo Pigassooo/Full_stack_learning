@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初识Vue</title>
+    <!-- 引入vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>插值语法</h1>
+        <h3>Hello, {{name}}</h3>
+        <hr/>
+        <h1>指令语法</h1>
+        <a v-bind:href="url">点我去学习1</a>
+        <a :href="url">点我去学习2</a>
+    </div>
+
+    <script type="text/javascript">
+
+        //创建Vue实例
+        new Vue({
+            el: '#root',
+            data: {
+                name: 'Pigasso',
+                url: 'http://www.atguigu.com'
+            }
+        })
+    </script>
+</body>
+
+</html>

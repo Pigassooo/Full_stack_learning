@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios基本使用</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.5.0/axios.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class=""></h2>
+        <button>GET</button>
+        <button>POST</button>
+        <button>PUT</button>
+        <button>DELETE</button>
+    </div>
+
+    <script>
+        // 获取按钮
+        const btns = document.querySelectorAll('button')
+
+        // 第一个按钮
+        btns[0].onclick = function () {
+            axios({
+                //请求类型
+                method: 'GET',
+                //URL
+                url: 'http://localhost:3000/posts/2'
+            }).then(response => {
+                console.log(response);
+            })
+        }
+
+        // 添加一篇新的文章
+        btns[1].onclick = function () {
+            axios({
+                //请求类型
+                method: 'POST',
+                //URL
+                url: 'http://localhost:3000/posts',
+                //设置请求体
+                data: {
+                    title: "good day",
+                    author: "Pigasso"
+                }
+            }).then(response => {
+                console.log(response);
+            })
+        }
+
+        //更新数据
+        btns[2].onclick = function () {
+                axios({
+                    //请求类型
+                    method: 'PUT',
+                    //URL
+                    url: 'http://localhost:3000/posts/DsHwF8a',
+                    //设置请求体
+                    data: {
+                        title: "good day",
+                        author: "Pig"
+                    }
+                }).then(response => {
+                    console.log(response);
+                })
+            }
+
+            //删除数据
+            btns[3].onclick = function () {
+                axios({
+                    //请求类型
+                    method: 'DELETE',
+                    //URL
+                    url: 'http://localhost:3000/posts/DsHwF8a',
+                    //无需设置请求体
+                }).then(response => {
+                    console.log(response);
+                })
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios基本使用</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.5.0/axios.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="">axios取消请求</h2>
+        <button>发送请求</button>
+        <button>取消请求</button>
+    </div>
+
+    <script>
+        //获取按钮
+        const btns = document.querySelectorAll('button')
+        // 2. 声明一个全局变量
+        let cancel = null
+
+        btns[0].onclick = function(){
+            // 检测上一次的请求是否已经完成
+            if(cancel){
+                // 取消上一次的请求
+                cancel()
+            }
+            axios({
+                method: 'GET',
+                url :'http://localhost:3000/posts',
+                // 1. 添加配置对象的属性
+                cancelToken: new axios.CancelToken(function(c){
+                    // 3.将c的值赋值给cancel
+                    cancel = c
+                })
+            }).then(Response=>{
+                console.log(Response);
+                // 将cancel的值初始化
+                cancel = null
+            })
+        }
+
+        // 绑定第二个事件
+        btns[1].onclick = function(){
+            cancel()
+        }
+    </script>
+</body>
+
+</html>

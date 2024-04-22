@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+        div {
+            overflow: scroll;
+            width: 2000px;
+            height: 2000px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+        111111111111111111111111111111
+    </div>
+    <script>
+        // const div = document.querySelector('div')
+        // div.addEventListener('scroll', function(){
+        //     // console.log(div.scrollTop);
+        // })
+
+        // window.addEventListener('scroll', function(){
+        //     console.log(document.documentElement.scrollTop);
+        // })
+
+        const div = document.querySelector('div')
+        div.addEventListener('scroll', function(){
+            const n = document.documentElement.scrollTop
+            if( n >= 100){
+                div.style.display = 'block'
+            } else {
+                div.style.display = 'none'
+            }
+        })
+    </script>
+</body>
+</html>

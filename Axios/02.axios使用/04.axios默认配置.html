@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios基本使用</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.5.0/axios.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class=""></h2>
+        <button>GET</button>
+        <button>POST</button>
+        <button>PUT</button>
+        <button>DELETE</button>
+    </div>
+
+    <script>
+        //获取按钮
+        const btns = document.querySelectorAll('button')
+
+
+        // 默认配置
+            axios.defaults.method = 'GET'
+            axios.defaults.baseURL = 'http://localhost:3000'
+            axios.defaults.params = { id: 100 }
+            axios.defaults.timeout = 3000;
+
+        //发送GET请求
+        btns[0].onclick = function () {
+            axios({
+                // method: 'GET',
+                url: '/posts'
+            }).then(Response => {
+                console.log(Response);
+            })
+        }
+    </script>
+</body>
+
+</html>

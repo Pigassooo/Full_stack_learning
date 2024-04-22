@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: powderblue;
+        }
+        .one {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+
+    <script>
+    const one = document.querySelector('.one')
+    const two = document.querySelector('.two')
+    document.addEventListener('click', function(){
+        alert(0)
+    })
+    one.addEventListener('click', function () {
+        alert(1)
+    })
+    two.addEventListener('click', function (e) {
+        alert(2)
+        // 阻止传播
+        e.stopPropagation()
+    })
+
+    </script>
+</body>
+</html>
