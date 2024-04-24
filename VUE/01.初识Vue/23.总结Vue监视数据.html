@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+
+
+
+    <!--
+        Vue监视数据的原理：
+            1. Vue会监视data中所有层次的数据
+
+            2. 如何检测对象中的数据？
+                通过setter实现监视，且要在new Vue时就传入要监测的数据/
+                    (1) 对象中后追加的属性，Vue默认不做响应式处理
+                    (2) 如需给后添加的属性做响应式，请使用如下API：
+                        Vue.set(this.student ,'sex', '男') 或
+                        vm.$set(this.student, 'sex', '男')
+            3. 如何监测数组中的数据？
+                通过包裹数组更新元素的方法实现，本质就是做了两件事：
+                    (1) 调用原生对应的方法对数组进行更新
+                    (2) 重新解析模板，进而更新页面
+
+            4. 在Vue修改数组中的某个元素一定要用一下方法：
+                1. 使用这些API(Vue内部重写了)：push() pop() shift() unshift() splice() sort() reverse()
+                2. Vue.set() 或者vm.$set()
+                    特别注意：Vue.set() 与 vm.$set() 不能给vm或者vm的根数据对象添加属性
+
+     -->
+
+    <div id="root">
+        <h1>student</h1>
+        <button @click="student.age++">年龄+1</button><br/>
+        <button @click="addSex">添加性别属性，默认为男</button><br/>
+        <button @click="student.sex = 'undefine'">修改性别属性</button><br/>
+        <button @click="addFriend">在列表首位添加一个朋友</button><br/>
+        <button @click="update">修改第一个朋友的名字为：chh</button><br/>
+        <button @click="addHobby">添加一个爱好</button><br/>
+        <button @click="updateHobby">修改第一个爱好为000</button><br/>
+
+        <h3>name:{{student.name}}</h3>
+        <h3>age:{{student.age}}</h3>
+        <h3 v-if="student.sex">gender:{{student.sex}}</h3>
+        <h3>hobby:</h3>
+        <ul>
+            <li v-for="(h,index) in student.hobby" ::key="index">
+                {{h}}
+            </li>
+        </ul>
+
+        <h3>friends</h3>
+        <ul>
+            <li v-for="(f,index) in student.friends" ::key="index">
+                {{f.name}}--{{f.age}}
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                student:{
+                    name:'pig',
+                    age:20,
+                    hobby:['11','22','33'],
+                    friends:[
+                        {name: 'ass',age: 18},
+                        {name:'ooo',age:19}
+                    ]
+                }
+            },
+            methods: {
+                addSex(){
+                    // Vue.set(this.student ,'sex', '男')
+                    vm.$set(this.student, 'sex', '男')
+                },
+                addFriend(){
+                    this.student.friends.unshift({name:'ch', age:50})
+                },
+                update() {
+                    this.student.friends[0].name = 'chh'
+                },
+                addHobby(){
+                    this.student.hobby.push(444)
+                },
+                updateHobby(){
+                    // this.student.hobby.splice(0,1,'000')
+                    Vue.set(this.student.hobby, 0, '000')
+                }
+            },
+        })
+    </script>
+
+</body>
+
+</html>

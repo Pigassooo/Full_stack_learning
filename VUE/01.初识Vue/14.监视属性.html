@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+        <h2>today is {{info}}</h2>
+        <button @click="changeWeather">switch weather</button>
+    </div>
+
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                isHot: true
+            },
+            methods: {
+                changeWeather() {
+                    this.isHot = !this.isHot
+                }
+            },
+            computed: {
+                info() {
+                    return this.isHot ? 'hot' : 'cool'
+                }
+            },
+            // watch:{
+            //    isHot:{
+            //     // 初始化时让hander调用一下
+            //     // immediate: true,
+            //     // handler 什么时候调用？
+            //     // 当isHot发生改变时，被调用
+            //     handler(newValue, oldValue){
+            //         console.log('isHot is changed', newValue, oldValue);
+            //         }
+            //    },
+            //    info: {
+            //         // 初始化时让hander调用一下
+            //         immediate: true,
+            //         // handler 什么时候调用？
+            //         // 当isHot发生改变时，被调用
+            //         handler(newValue, oldValue) {
+            //             console.log('info is changed', newValue, oldValue);
+            //         }
+            //     }
+            // }
+        })
+
+        // 第二种配置方式
+        vm.$watch('isHot',{
+                handler(newValue, oldValue) {
+                    console.log('isHot is changed', newValue, oldValue);
+                    }
+               },
+        )
+
+    </script>
+</body>
+
+</html>

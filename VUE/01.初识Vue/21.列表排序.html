@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+        <input type="text" placeholder="name" v-model="keyWord">
+        <button type="button" @click="sortType=2">up</button>
+        <button type="button" @click="sortType=1">down</button>
+        <button type="button" @click="sortType=0">origin</button>
+        <ul>
+            <li v-for="(p,index) in filPersons" :key="index">
+                {{p.name}}-{{p.age}}--{{p.sex}}
+            </li>
+        </ul>
+
+        <script type="text/javascript">
+            new Vue({
+                el: '#root',
+                data: {
+                    keyWord: '',
+                    persons: [
+                        { id: '001', name: 'piga', age: 18, sex: 'man' },
+                        { id: '002', name: 'asso', age: 20, sex: 'woman' },
+                        { id: '003', name: 'ooos', age: 19, sex: 'man' }
+                    ],
+                    sortType: 0, // 0 原顺序 1 降序  2 升序
+                },
+                computed: {
+                    filPersons() {
+                        const arr = this.persons.filter((p) => {
+                            return p.name.indexOf(this.keyWord) !== -1
+                        })
+                        // 判断一下是否需要排序
+                        if(this.sortType){
+                            arr.sort((a,b)=>{
+                                return this.sortType === 1 ? b.age - a.age : a.age - b.age
+                            })
+                        }
+                        return arr
+                    }
+                }
+            })
+        </script>
+</body>
+
+</html>

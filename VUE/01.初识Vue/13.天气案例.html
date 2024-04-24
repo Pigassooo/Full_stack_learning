@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+        <h2>today is {{info}}</h2>
+        <button @click="changeWeather">switch weather</button>
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+            el: '#root',
+            data: {
+                isHot:true
+            },
+            methods: {
+                changeWeather(){
+                    this.isHot = !this.isHot
+                }
+            },
+            computed:{
+                info(){
+                    return this.isHot ? 'hot' : 'cool'
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

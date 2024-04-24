@@ -15,13 +15,26 @@
 
     <script type="text/javascript">
 
-        const v = new Vue({
-            // el: '#root',
-            data: {
-                name: ''
+        // const v = new Vue({
+        //     // el: '#root',  第一种写法
+        //     data: {
+        //         name: 'Pigasso'
+        //     }
+        // })
+
+        // setTimeout(() => {
+        //     v.$mount('#root')  // 第二种写法
+        // }, 1000);
+
+        new Vue({
+            el: '#root',
+            data: function () {
+                return {
+                    name: '尚硅谷'
+                }
             }
         })
-        console.log(v);
+
     </script>
 </body>
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+        first name:<input type="text" v-model="firstName"> <br /><br />
+        last name:<input type="text" v-model="lastName"> <br /><br />
+        full name:<span>{{fullName}}</span> <br /><br />
+        <!-- 有缓存，只需要调用一次get() -->
+        full name:<span>{{fullName}}</span> <br /><br />
+        full name:<span>{{fullName}}</span> <br /><br />
+        full name:<span>{{fullName}}</span> <br /><br />
+        full name:<span>{{fullName}}</span> <br /><br />
+    </div>
+
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                firstName: 'pig',
+                lastName: 'asso'
+            },
+            computed: {
+                fullName(){
+                    console.log('get被调用了');
+                    return this.firstName + '-' + this.lastName
+                }
+            },
+
+        })
+
+    </script>
+</body>
+
+</html>

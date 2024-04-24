@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <!--
+        1. Vue 中常用的按键别名
+            enter
+            delete
+            esc
+            space
+            tab  搭配keydown
+            up
+            down
+            left
+            right
+
+        2. 系统修饰键：（用法特殊） ctrl  alt  shift  meta
+            1. 配合keyup使用：按下的同时再按下其他键，随后施放其他键，才被触发
+            2. 配合keydown使用：正常触发事件。
+
+
+
+     -->
+    <div id="root">
+        <h2>welcome back, {{name}}</h2>
+        <input type="text" placeholder="按下回车提示输入" @keydown.ctrl="showInfo">
+    </div>
+
+    <script type="text/javascript">
+        // Vue.config.keyCodes.huiche = 13  定义了一个huiche按键
+
+       new Vue({
+           el: '#root',
+           data: {
+               name: 'PIg'
+           },
+           methods:{
+
+            showInfo(e){
+                console.log(e.target.value);
+                // if(e.keyCode !== 13) return
+                // console.log(e.key, e.keyCode);
+            }
+           }
+       })
+    </script>
+</body>
+
+</html>

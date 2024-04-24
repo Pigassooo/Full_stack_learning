@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+        <!-- 遍历数组 -->
+        <button @click.once="add">click</button>
+        <ul>
+            <li v-for="(p,index) in persons" :key="p.id">
+                {{p.name}}-{{p.age}}
+                <input type="text">
+            </li>
+        </ul>
+
+    <script type="text/javascript">
+        new Vue({
+            el: '#root',
+            data: {
+                persons:[
+                    {id:'001', name:'pig', age:18},
+                    {id:'002', name:'ass', age:19},
+                    {id:'003', name:'ooo', age:20}
+                ],
+            },
+            methods: {
+                add(){
+                    const p = {id:'004',name:'pp',age:40}
+                    this.persons.unshift(p)
+                }
+            },
+        })
+
+    </script>
+</body>
+
+</html>

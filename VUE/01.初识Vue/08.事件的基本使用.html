@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <h2>welcome back, {{name}}</h2>
+        <!-- <button v-on:click="showInfo">click me</button> -->
+        <button @click="showInfo(66, $event)">click me</button>
+    </div>
+
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                name: 'pig'
+            },
+            methods:{
+                showInfo(number, a){
+                    alert(number)
+                    console.log(number, a);
+                    // console.log(this === vm); // 此处的this是vm
+                }
+            }
+        })
+    </script>
+</body>
+</html>
