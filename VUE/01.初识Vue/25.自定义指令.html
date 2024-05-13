@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+        <h2>当前的n是:<span v-text="n"></span></h2>
+        <h2>放大十倍后的n是:<span v-big="n"></span></h2>
+        <button v-on:click="n++">增加n</button>
+        <input type="text" v-fbind:value="n">
+    </div>
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                n: 10
+            },
+            directives:{
+                // v-big 何时被调用？
+                // 1.
+                // 2.
+                big(element, binding){
+                    element.innerHTML = binding.value*10;
+                    console.log(this); // 注意此处的this是window
+                },
+                fbind:{
+                    // 指令与元素绑定时
+                    bind(el, binding){
+                        el.value = binding.value;
+                    },
+                    // 指令所在元素插入到DOM时
+                    inserted(el, binding){
+                        el.focus();
+                    },
+                    // 指令所在模板被重新解析时
+                    update(el, binding){
+                        el.value = binding.value;
+                    }
+                }
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>

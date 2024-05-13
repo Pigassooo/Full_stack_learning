@@ -11,9 +11,6 @@
 <body>
 
     <div id="root">
-        <h2>today is {{info}}</h2>
-        <button @click="changeWeather">switch weather</button>
-        <hr/>
         <h3>a的值是：{{numbers.a}}</h3>
         <button @click="numbers.a++">click</button>
         <h3>b的值是：{{numbers.b}}</h3>
@@ -30,22 +27,7 @@
                     b:1
                 }
             },
-            methods: {
-                changeWeather() {
-                    this.isHot = !this.isHot
-                }
-            },
-            computed: {
-                info() {
-                    return this.isHot ? 'hot' : 'cool'
-                }
-            },
             watch:{
-               isHot:{
-                handler(newValue, oldValue){
-                    console.log('isHot is changed', newValue, oldValue);
-                    }
-               },
             // 监视多级结构中某个属性的变化
             //    'numbers.a':{
             //     handler(){
