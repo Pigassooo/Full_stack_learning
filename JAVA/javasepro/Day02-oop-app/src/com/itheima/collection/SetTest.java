@@ -10,6 +10,5 @@ public class SetTest {
         HashMap<Integer, Integer> hashMap = new HashMap();
         hashMap.put(1, 1);
         hashMap.put(2, 2);
-        HashSet
     }
 }

@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Day01-basic-app/Day01-basic-app.iml" filepath="$PROJECT_DIR$/Day01-basic-app/Day01-basic-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day02-oop-app/Day02-oop-app.iml" filepath="$PROJECT_DIR$/Day02-oop-app/Day02-oop-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day03-io-app/Day03-io-app.iml" filepath="$PROJECT_DIR$/Day03-io-app/Day03-io-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day04-multiThreading-app/Day04-multiThreading-app.iml" filepath="$PROJECT_DIR$/Day04-multiThreading-app/Day04-multiThreading-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/javasepro.iml" filepath="$PROJECT_DIR$/javasepro.iml" />
     </modules>
   </component>
