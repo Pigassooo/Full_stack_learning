@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="951ff77f-b349-4911-af56-e2efa4e1ed43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/javasepro/Day03-io-app/Day03-io-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javasepro/Day03-io-app/src/com/itheima/properties/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javasepro/Day03-io-app/src/com/itheima/recursion/123" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javasepro/Day03-io-app/src/com/itheima/recursion/Test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javasepro/Day03-io-app/src/com/itheima/recursion/test2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaWeb/Maven-Project/Maven-Project01/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaWeb/Maven-Project/Maven-Project01/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaWeb/Maven-Project/Maven-Project01/src/main/java/com/pigasso/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaWeb/SpringBootProject/demo1/src/main/java/com/pigasso/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javasepro/Day04-multiThreading-app/src/com/itheima/MyCallable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javasepro/Day04-multiThreading-app/src/com/itheima/MyRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javasepro/Day04-multiThreading-app/src/com/itheima/Test2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javasepro/Day04-multiThreading-app/src/com/itheima/Test3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javasepro/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/javasepro/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javasepro/Day02-oop-app/src/com/itheima/collection/SetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/javasepro/Day02-oop-app/src/com/itheima/collection/SetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javasepro/Day04-multiThreading-app/src/com/itheima/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/itheima/test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javasepro/out/production/Day04-multiThreading-app/com/itheima/test1$Mycallable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javasepro/out/production/Day04-multiThreading-app/com/itheima/test1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +30,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.test1.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -44,6 +41,26 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.test1" />
+      <module name="JAVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test1" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -63,6 +80,10 @@
       <workItem from="1713161359639" duration="28000" />
       <workItem from="1716782574201" duration="5000" />
       <workItem from="1716858080457" duration="44000" />
+      <workItem from="1716943166227" duration="99000" />
+      <workItem from="1716944177312" duration="34000" />
+      <workItem from="1716944241655" duration="3000" />
+      <workItem from="1716944375204" duration="8000" />
     </task>
     <servers />
   </component>
